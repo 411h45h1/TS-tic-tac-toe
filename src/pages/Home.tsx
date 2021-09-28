@@ -22,7 +22,7 @@ const Home = (props: Props) => {
     OnStartGame(players);
   };
   return (
-    <div>
+    <div className="homeCont">
       <h1>React/TypeScript Tic Tac Toe</h1>
       <form onSubmit={handleSubmit}>
         <div>
