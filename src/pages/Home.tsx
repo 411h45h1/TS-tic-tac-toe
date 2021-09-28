@@ -21,6 +21,7 @@ const Home = (props: Props) => {
     if (!canStart) return;
     OnStartGame(players);
   };
+
   return (
     <div className="homeCont">
       <h1>React/TypeScript Tic Tac Toe</h1>

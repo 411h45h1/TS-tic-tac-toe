@@ -1,4 +1,4 @@
-import React from "react";
+import useSound from "use-sound";
 
 interface Props {
   board: string[];
@@ -7,13 +7,23 @@ interface Props {
 
 const Game = (props: Props) => {
   const { board, handleClick } = props;
+  const [click] = useSound(`${process.env.PUBLIC_URL}/sounds/click.wav`, {
+    volume: 0.5,
+  });
 
   return (
     <div className="gameCont">
       {board.map((value, index) => (
-        <button className="gameButton" onClick={() => handleClick(index)}>
+        <div
+          key={index}
+          className="gameButton"
+          onClick={() => {
+            click();
+            handleClick(index);
+          }}
+        >
           {value}
-        </button>
+        </div>
       ))}
     </div>
   );
