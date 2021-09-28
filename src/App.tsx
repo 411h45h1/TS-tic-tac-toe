@@ -4,18 +4,18 @@ import useGameLogic from "./useGameLogic";
 const App = () => {
   let game = useGameLogic();
 
-  const HomeScreen = () =>
+  const Screens = () =>
     game.status === "created" ? (
       <Home OnStartGame={game.OnStartGame} />
     ) : game.status === "playing" ? (
-      <Game />
+      <Game board={game.board} handleClick={game.handleClick} />
     ) : game.status === "finished" ? (
       <Finished />
     ) : null;
 
   return (
     <div className="App">
-      <HomeScreen />
+      <Screens />
     </div>
   );
 };
