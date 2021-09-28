@@ -6,7 +6,7 @@ interface ReturnValue {
   winner: string | null;
   handleClick: (index: number) => void;
   OnStartGame: (players: string[]) => void;
-  reOnStartGame: () => void;
+  OnRestartGame: () => void;
 }
 const useGameLogic = (): ReturnValue => {
   const [board, setBoard] = useState(Array(9).fill(""));
@@ -65,13 +65,13 @@ const useGameLogic = (): ReturnValue => {
     setTurn("X");
     setStatus("playing");
   };
-  const reOnStartGame = () => {
+  const OnRestartGame = () => {
     setBoard(Array(9).fill(""));
     setWinner("");
     setStatus("created");
   };
 
-  return { board, status, winner, handleClick, reOnStartGame, OnStartGame };
+  return { board, status, winner, handleClick, OnRestartGame, OnStartGame };
 };
 
 export default useGameLogic

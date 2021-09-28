@@ -10,7 +10,7 @@ const App = () => {
     ) : game.status === "playing" ? (
       <Game board={game.board} handleClick={game.handleClick} />
     ) : game.status === "finished" ? (
-      <Finished />
+      <Finished name={game.winner} restart={game.OnRestartGame} />
     ) : null;
 
   return (
