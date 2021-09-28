@@ -1,7 +1,11 @@
 import React from "react";
 
 const Finished = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Finished</h1>
+    </div>
+  );
 };
 
 export default Finished;

@@ -1,26 +1,22 @@
-import { useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Finished, Game, Home } from "./pages";
+import useGameLogic from "./useGameLogic";
 
 const App = () => {
-  useEffect(() => {}, []);
+  let game = useGameLogic();
+
+  const HomeScreen = () =>
+    game.status === "created" ? (
+      <Home OnStartGame={game.OnStartGame} />
+    ) : game.status === "playing" ? (
+      <Game />
+    ) : game.status === "finished" ? (
+      <Finished />
+    ) : null;
 
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/Finished">
-            <Finished />
-          </Route>
-          <Route path="/Game">
-            <Game />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <HomeScreen />
+    </div>
   );
 };
 
