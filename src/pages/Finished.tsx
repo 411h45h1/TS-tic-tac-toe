@@ -24,7 +24,7 @@ const Finished = (props: Props) => {
 
   return (
     <div className="finishedCont">
-      <h1>{name ? `Player: ${name} wins!!!` : "It's a tie "}</h1>
+      <h1>{name ? `Player: ${name} wins!!!` : "It's a draw "}</h1>
       <button
         onClick={() => {
           restart();

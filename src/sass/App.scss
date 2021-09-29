@@ -43,7 +43,7 @@
 .gameButton {
   width: 30vw;
   height: 30vh;
-  font-size: 60px;
+  font-size: 10vw;
   margin-right: 10px;
   margin-left: 10px;
   border: 2px solid black;
@@ -52,10 +52,21 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
+
   &:hover {
     cursor: pointer;
     background-color: black;
     color: white;
+  }
+
+  @media only screen and (max-width: 735px) {
+    width: 25vw;
+    font-size: 25vw;
+  }
+
+  @media only screen and (max-width: 290px) {
+    width: 20vw;
+    font-size: 35vw;
   }
 }
 
@@ -66,6 +77,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  h1 {
+    font-size: 6vw;
+  }
 }
 
 button {

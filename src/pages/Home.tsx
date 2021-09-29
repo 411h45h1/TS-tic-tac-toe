@@ -24,7 +24,7 @@ const Home = (props: Props) => {
 
   return (
     <div className="homeCont">
-      <h1>React/TypeScript Tic Tac Toe</h1>
+      <h1>Tic Tac Toe</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="player1">Player 1</label>
