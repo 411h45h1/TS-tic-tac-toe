@@ -38,6 +38,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  background-color: black;
 }
 
 .gameButton {
@@ -53,11 +54,13 @@
   align-items: center;
   font-weight: bold;
   user-select: none;
+  background-color: whitesmoke;
 
   &:hover {
     cursor: pointer;
     background-color: black;
     color: white;
+    background-color: tomato;
   }
 
   @media only screen and (max-width: 735px) {
