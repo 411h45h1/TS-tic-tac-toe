@@ -52,6 +52,7 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  user-select: none;
 
   &:hover {
     cursor: pointer;
@@ -88,6 +89,7 @@ button {
   padding: 15px;
   border-radius: 7px;
   font-weight: bold;
+
   &:hover {
     cursor: pointer;
     transform: scale(0.9);

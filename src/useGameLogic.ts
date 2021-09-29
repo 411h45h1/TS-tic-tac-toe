@@ -53,10 +53,13 @@ const useGameLogic = (): ReturnValue => {
   }, [board, players, status]);
 
   const handleClick = (index: number): void => {
-    if (index < 0 || index > 9 || winner) return;
+    const isFilled = board[index].length > 0 ? true : false
+    if (index < 0 || index > 9 || winner || isFilled) return;
+   
     const newBoard = [...board];
     newBoard.splice(index, 1, turn);
     setBoard(newBoard);
+
     const newTurn = turn === "X" ? "O" : "X";
     setTurn(newTurn);
   };
